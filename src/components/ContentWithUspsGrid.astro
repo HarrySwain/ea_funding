@@ -11,6 +11,9 @@ export type usp = {
 }
 
 const {heading, content, usps} = Astro.props;
+
+//TODO
+//change icons to ticks
 ---
 <section class="bg-[url('img/blob-scene-haikei.svg')] bg-no-repeat bg-cover bg-center">
   <div class="max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8">
@@ -49,12 +52,10 @@ const {heading, content, usps} = Astro.props;
         </span>
 
         <div>
-          <h2 class="text-lg font-bold">Lorem, ipsum dolor.</h2>
+          <h2 class="text-lg font-bold">{usp.heading}</h2>
 
           <p class="mt-1 text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-            cumque tempore est ab possimus quisquam reiciendis tempora animi!
-            Quaerat, saepe?
+            {usp.content}
           </p>
         </div>
       </div>
