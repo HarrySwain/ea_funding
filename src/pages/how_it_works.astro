@@ -1,0 +1,76 @@
+---
+import Layout from '../layouts/Layout.astro'
+import ContentLeftImageRight from '../components/ContentLeftImageRight.astro'
+import ContentRightImageLeft from '../components/ContentRightImageLeft.astro';
+import ContentWithUspsGrid from '../components/ContentWithUspsGrid.astro';
+---
+<Layout title="How It Works">
+  <ContentLeftImageRight
+    imageUrl="img/undraw_business_deal.svg"
+    imageAlt="consumer deal"
+    subheading="Approved Legal Partners"
+    heading="Consumer Credit"
+    listItems={[
+      {
+        icon: '',
+        content: 'EAF’s Australian Credit Licence places minimum requirements on both EAF and its law firm partners that apply for approval to represent EAF’s consumer credit facility.',
+      },
+      {
+        icon: '',
+        content: 'A law firm will need to meet minimum thresholds in a number of administrative and knowledge areas before it is accepted as an Approved Credit Representative of EAF.'
+      },
+      {
+        icon: '',
+        content: 'Once an approved credit representative of EAF, your firm can offer clients an EAF credit application to fund approved out-of-pocket expenses associate with the underlying legal matter.'
+      },
+      {
+        icon: '',
+        content: 'The Solicitor communicates directly with EAF on behalf of the client and will advise on the amount of credit required and the details of each disbursement. They will also, in some instances, provide EAF with a guarantee.'
+      },
+      {
+        icon: '',
+        content: 'EAF does not liaise directly with the client.' 
+      }
+    ]}
+  />
+  <ContentRightImageLeft
+    imageUrl="img/undraw_consumer_deal.svg"
+    imageAlt="business deal"
+    subheading="Approved Legal Partners"
+    heading="Consumer Credit"
+    listItems={[
+      {
+        icon: '',
+        content: 'EAF’s Australian Credit Licence places minimum requirements on both EAF and its law firm partners that apply for approval to represent EAF’s consumer credit facility.'
+      },
+      {
+        icon: '',
+        content: 'A law firm will need to meet minimum thresholds in a number of administrative and knowledge areas before it is accepted as an Approved Credit Representative of EAF.'
+      },
+      {
+        icon: '',
+        content: 'Once an approved credit representative of EAF, your firm can offer clients an EAF credit application to fund approved out-of-pocket expenses associate with the underlying legal matter.'
+      },
+      {
+        icon: '',
+        content: 'The Solicitor communicates directly with EAF on behalf of the client and will advise on the amount of credit required and the details of each disbursement. They will also, in some instances, provide EAF with a guarantee.'
+      },
+      {
+        icon: '',
+        content: 'EAF does not liaise directly with the client.'
+      }
+    ]}
+  />
+  <div class="max-w-screen-xl px-4 py-8 text-center">
+    <ContentWithUspsGrid 
+      heading=""
+      content=""
+      backgroundImage="public/img/handinhand.jpg"
+      usps={[{
+        icon: "",
+        heading: "",
+        content: "",
+      }]}
+    />
+  </div>
+</Layout>

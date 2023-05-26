@@ -2,7 +2,8 @@
 export interface Props {
   heading: string,
   content: string,
-  usps: usp[]
+  usps: usp[],
+  backgroundImage: string,
 }
 export type usp = {
   icon: string,
@@ -10,16 +11,15 @@ export type usp = {
   content: string,
 }
 
-const {heading, content, usps} = Astro.props;
+const {heading, content, usps, backgroundImage} = Astro.props;
 
 //TODO
 //change icons to ticks
 ---
-<section class="bg-[url('img/blob-scene-haikei.svg')] bg-no-repeat bg-cover bg-center">
+<section class={`bg-[url('${backgroundImage}')] bg-no-repeat bg-cover bg-center`}>
   <div class="max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8">
     <div class="max-w-xl">
       <h2 class="text-3xl font-bold sm:text-4xl">{heading}</h2>
-
       <p class="mt-4">
         {content}
       </p>
