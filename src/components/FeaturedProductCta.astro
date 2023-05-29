@@ -11,7 +11,7 @@ const { image, title, content, buttonLink, buttonText } = Astro.props;
 ---
 
 <section
-  class="overflow-hidden bg-cover bg-top bg-no-repeat brightness-70"
+  class="overflow-hidden bg-cover bg-top bg-no-repeat bg-blend-darken"
   style={`background-image: url(${image});`}
 >
   <div class="bg-black/25 p-8 md:p-12 lg:px-16 lg:py-24">
@@ -29,7 +29,8 @@ const { image, title, content, buttonLink, buttonText } = Astro.props;
       <div class="mt-4 sm:mt-8">
         <a
           href={buttonLink}
-          class="inline-block rounded-full bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
+          #a6ce39
+          class="inline-block rounded-full bg-lime-300 px-12 py-3 text-sm font-medium text-white transition hover:bg-lime-400 focus:outline-none focus:ring focus:ring-yellow-400"
         >
           {buttonText}
         </a>
