@@ -1,19 +1,20 @@
 ---
 export interface Props {
-  imageUrl: string,
-  imageAlt: string,
-  subheading: string,
-  heading: string,
-  listItems: ListItem[],
+  imageUrl: string;
+  imageAlt: string;
+  subheading: string;
+  heading: string;
+  listItems: ListItem[];
 }
 
 export type ListItem = {
-  icon: string,
-  content: string,
-}
+  icon: string;
+  content: string;
+};
 
-const {imageUrl, imageAlt, subheading, heading, listItems} = Astro.props;
+const { imageUrl, imageAlt, subheading, heading, listItems } = Astro.props;
 ---
+
 <section>
   <div
     class="mx-auto max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8"
@@ -25,18 +26,18 @@ const {imageUrl, imageAlt, subheading, heading, listItems} = Astro.props;
         <img
           alt={imageAlt}
           src={imageUrl}
-          class="absolute inset-0 h-full w-full object-cover"
+          class="absolute inset-0 h-full w-full object-fit"
         />
       </div>
 
-      <div class="lg:py-24">
+      <div class="lg:py-1">
         <h4>{subheading}</h4>
         <h2 class="text-3xl font-bold sm:text-4xl">{heading}</h2>
-        {listItems.map((listItem) => (
-          <p class="mt-4 text-gray-600">
-            {listItem.content}
-          </p>
-        ))}
+        {
+          listItems.map((listItem) => (
+            <p class="mt-4 text-gray-600">{listItem.content}</p>
+          ))
+        }
         <a
           href="#"
           class="mt-8 inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
@@ -47,4 +48,3 @@ const {imageUrl, imageAlt, subheading, heading, listItems} = Astro.props;
     </div>
   </div>
 </section>
-
