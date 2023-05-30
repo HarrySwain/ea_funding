@@ -3,9 +3,10 @@ export interface Props {
 	imageUrl: string,
   title: string,
   content: string,
+  link: string,
 }
 
-const { imageUrl, title, content } = Astro.props;
+const { imageUrl, title, content, link } = Astro.props;
 
 ---
 <article class="overflow-hidden rounded-lg shadow transition hover:shadow-lg max-w-sm">
@@ -15,7 +16,7 @@ const { imageUrl, title, content } = Astro.props;
     class="h-56 w-full object-cover"
   />
 
-    <a href="#">
+    <a href={link}>
       <h3 class="mt-0.5 text-lg text-gray-900">
         {title}
       </h3>
