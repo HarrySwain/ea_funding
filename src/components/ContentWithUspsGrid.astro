@@ -3,7 +3,6 @@ export interface Props {
   heading: string,
   content: string,
   usps: usp[],
-  backgroundImage: string,
 }
 export type usp = {
   icon: string,
@@ -11,7 +10,7 @@ export type usp = {
   content: string,
 }
 
-const {heading, content, usps, backgroundImage} = Astro.props;
+const {heading, content, usps} = Astro.props;
 
 //TODO
 //change icons to ticks
