@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro'
 import FAQ from '../components/FAQ.astro'
 ---
 <Layout title="FAQ">
-  <div class="flex flex-row min-h-screen justify-center items-center">
+  <section class="max-w-screen-md mx-auto px-4">
     <FAQ questionsAndAnswers = {
       [{
         "question": "I am a law firm and would like to know more about EAF’s funding solutions?",
@@ -34,5 +34,5 @@ import FAQ from '../components/FAQ.astro'
         "answer": "Once your legal matter has been resolved, your settlement monies will be deposited into your Solicitor’s trust account. Your solicitor will then arrange for the repayment of your EAF loan on your behalf, as per your instructions."
         },]
     }/>
-  </div>
+  </section>
 </Layout>

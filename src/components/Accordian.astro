@@ -7,9 +7,11 @@ const { title } = Astro.props;
 ---
 
 <div class="space-y-4 max-w-3xl py-2">
-  <details class="group [&_summary::-webkit-details-marker]:hidden bg-primary-100 rounded-sm">
+  <details
+    class="group [&_summary::-webkit-details-marker]:hidden bg-primary-100 rounded"
+  >
     <summary
-      class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900"
+      class="flex cursor-pointer items-center justify-between gap-1.5 bg-gray-50 p-4 text-gray-900"
     >
       <h2 class="font-medium">
         {title}
@@ -30,7 +32,7 @@ const { title } = Astro.props;
       </svg>
     </summary>
 
-    <p class="mt-4 px-4 leading-relaxed text-gray-700">
+    <p class="leading-relaxed text-gray-700 px-4">
       <slot />
     </p>
   </details>
