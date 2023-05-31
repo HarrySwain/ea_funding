@@ -30,9 +30,9 @@ const { heading, content, usps } = Astro.props;
     >
       {
         usps.map((usp) => (
-          <div class="flex items-start gap-4 bg-primary-100 rounded-lg">
+          <div class="flex items-start gap-4 bg-primary-100 rounded-lg shadow-md">
             <div class="px-4 py-4">
-              <h2 class="text-lg font-bold">{usps.indexOf(usp) + 1}.</h2>
+              <h2 class="text-lg font-bold border-b-2 border-b-primary-300">{usps.indexOf(usp) + 1}.</h2>
 
               <p class="mt-1 text-sm">{usp.content}</p>
             </div>
